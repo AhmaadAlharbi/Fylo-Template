@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+/* Start Variables */
+:root {
+}
+/* End Variables */
+/*Start Global Rules*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*header*/
+header nav .container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container ul {
+  display: flex;
+}
+header nav .container ul li {
+  padding: 20px;
+}
+header nav .container ul li a {
+  color: hsl(243, 87%, 12%);
+}
+header nav ul li a:hover {
+  color: hsl(0, 0%, 75%);
+}
+/*end header*/
+/*start landing*/
+.landing .container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .text {
+  flex: 1;
+}
+.landing .text h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.5;
+  color: hsl(243, 87%, 12%);
+}
+.landing .text p {
+  color: hsl(238, 22%, 44%);
+  margin: 15px 0;
+}
+.landing .img {
+  flex: 1;
+}
+form input {
+  width: 50%;
+  padding: 7px 0;
+}
+form button {
+  background-color: hsl(224, 93%, 58%);
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  margin-left: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+@media (max-width: 992px) {
+  .landing .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .landing .text {
+    order: 2;
+  }
+  .landing .text h1 {
+    font-size: 25px;
+  }
+  .landing .text p {
+    font-size: 16px;
+  }
+  .landing .img {
+    order: 1;
+  }
+  .landing form input {
+    display: block;
+    width: 100%;
+  }
+  .landing form button {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+/*section two*/
+.two .main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 200px;
+  padding: 80px;
+  background-color: hsl(240, 75%, 98%);
+  position: relative;
+  /* background-image: url(../images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.two .main-content::before {
+  content: url("../images/bg-curve-desktop.svg");
+  position: absolute;
+  top: -97px;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 40px;
+}
+.two .text {
+  flex: 1;
+}
+.two .text h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  margin: 40px 0;
+}
+.two .text p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: hsl(238, 22%, 44%);
+}
+.two .text > p:last-of-type {
+  margin: 30px 0;
+}
+.two .text h4 {
+  color: hsl(170, 45%, 43%);
+  display: inline-block;
+  margin: 30px 0;
+}
+.two .card {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 60%;
+  padding: 30px;
+}
+
+.card .card-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: hsl(238, 22%, 44%);
+}
+.card .card-body img {
+  width: 49px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.card .card-body .by {
+  display: flex;
+}
+.by div {
+  margin: 10px 0 0 10px;
+  font-size: 15px;
+}
+.by div span {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.two .img {
+  flex: 1;
+}
+
+@media (max-width: 992px) {
+  .two .main-content {
+    flex-direction: column;
+  }
+  .two > img {
+    order: 1;
+  }
+  .two .text {
+    order: 2;
+  }
+  .two .text h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .two .text p {
+    font-weight: normal;
+  }
+  .two .card {
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    padding: 30px;
+  }
+}
+/*end section 2 */
+/*start secton 3*/
+.three {
+  background-color: hsl(238, 22%, 44%);
+  padding: 50px;
+}
+
+.three .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.three .text {
+  color: white;
+  flex: 1;
+}
+.three h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.three form {
+  flex: 1;
+}
+
+.three form input {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.three button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+@media (max-width: 992px) {
+  .three .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .three .text {
+    margin: 30px 0;
+  }
+  .three form {
+    width: 100%;
+  }
+}
+/*end section 3 */
+/*start footer*/
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  padding: 40px;
+  background-color: hsl(243, 87%, 12%);
+  color: white;
+  min-height: 400px;
+}
+footer .col1 .phone {
+  margin: 30px 0;
+}
+footer .col1 > img {
+  filter: brightness(0) invert(1);
+}
+
+footer ul li {
+  padding-bottom: 20px;
+}
+footer ul li a {
+  color: white;
+}
+
+footer .col2,
+footer .col3,
+footer .col4 {
+  transform: translateY(77px);
+  -webkit-transform: translateY(77px);
+  -moz-transform: translateY(77px);
+  -ms-transform: translateY(77px);
+  -o-transform: translateY(77px);
+}
+
+footer .col4 i {
+  margin-left: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+  cursor: pointer;
+}
+footer .col4 i:hover {
+  color: hsl(238, 22%, 44%);
+  border-color: hsl(238, 22%, 44%);
+}
+
+@media (max-width: 992px) {
+  footer {
+    grid-template-columns: 1fr;
+    place-items: unset;
+    padding-bottom: 90px;
+    gap: 30px;
+  }
+
+  footer .col4 {
+    text-align: center;
+  }
+  footer .col2,
+  footer .col3,
+  footer .col4 {
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+  }
+}
